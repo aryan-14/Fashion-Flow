@@ -1,7 +1,12 @@
-import { Inter } from "next/font/google";
+import { JetBrains_Mono} from "next/font/google";
 import "./globals.css";
+import { Weight } from "lucide-react";
+import Header from "@/components/ui/Header";
+import Footer from "@/components/ui/Footer";
+import CartProvider from "@/components/ui/CartProvider";
+import { Toaster } from "@/components/ui/toaster";
 
-const inter = Inter({ subsets: ["latin"] });
+const JetBrainsMono = JetBrains_Mono({ subsets: ["latin"],  weight:["100","200","300","400","500","600","700","800"],variable:'--font-jetbrainsMono' });
 
 export const metadata = {
   title: "Create Next App",
@@ -11,7 +16,17 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={JetBrainsMono.className}>
+        <CartProvider>
+
+        
+        <Header/>
+        {children}
+        <Toaster/>
+        <Footer/>
+        </CartProvider>
+        
+      </body>
     </html>
   );
 }

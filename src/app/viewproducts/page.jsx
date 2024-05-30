@@ -3,9 +3,7 @@ import { client } from "../lib/sanity";
 import Carousel from "@/components/ui/Carousel";
 import Productcategories from "@/components/ui/Productcategories";
 
-
-
-const getData = async ()=> {
+const getData = async () => {
   const query = `*[_type == 'product']{
     _id,
     name,
@@ -18,39 +16,27 @@ const getData = async ()=> {
       name
     },
     gender,
-    color
-  }
-  
-  `;
+    color,
+    quantity
+  }`;
 
-  const data =  await client.fetch(query);
+  const data = await client.fetch(query);
   return data;
 };
 
-
-
-const viewproducts = async () => {
-
-  const products = await getData()
-  // console.log(products);
-
+const ViewProducts = async () => {
+  const products = await getData();
+  console.log(products);
 
   return (
-   <section className="py-8">
-    <div className="container mx-auto">
-  
-      <h2 className="text-center">
-      View our exciting products!
-      </h2>
+    <section className="py-8">
+      <div className="container mx-auto">
+        <h2 className="text-center">View our exciting products!</h2>
+        {/* <Carousel products={products}/> */}
+        <Productcategories products={products} />
+      </div>
+    </section>
+  );
+};
 
-      {/* <Carousel products={products}/> */}
-      <Productcategories products={products}/>
-    
-      
-    </div>
-
-   </section>
-  )
-}
-
-export default viewproducts
+export default ViewProducts;

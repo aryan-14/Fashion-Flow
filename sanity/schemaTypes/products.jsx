@@ -53,7 +53,7 @@ export default {
                     { title: 'Black', value: 'black' },
                     { title: 'Green', value: 'green' },
                     { title: 'Blue', value: 'blue' },
-                    // Add more colors as needed
+                    
                 ],
             },
         },
@@ -66,9 +66,14 @@ export default {
                     { title: 'Male', value: 'male' },
                     { title: 'Female', value: 'female' },
                     { title: 'Unisex', value: 'unisex' },
-                    // Add more options as needed
+                    
                 ],
             },
+        },
+        {
+            name: 'quantity',
+            title: 'Quantity',
+            type: 'number',
         },
     ]
 }

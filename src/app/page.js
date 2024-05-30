@@ -7,9 +7,10 @@ export default function Home() {
       <section className="py-8">
         <div className="container mx-auto">
           <div className="h-[200px]"></div>
-          <h1 className="text-center text-black-400">
-            View our exciting products!
-          </h1>
+          <h1 className="text-center text-3xl text-black-400"> {/* Increased size using text-3xl */}
+  View our exciting products!
+</h1>
+
           <h5 className="text-center nb-[30px] text-black-400 mb-20">The world premium brand at one destination</h5>
 
           <Link href='/viewproducts'>

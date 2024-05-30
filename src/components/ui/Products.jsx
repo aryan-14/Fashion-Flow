@@ -33,8 +33,9 @@ const Products = ({ products }) => {
         <div className="absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center gap-[10px] opacity-0 group-hover:opacity-100 transition-all duration-300">
           <Addtocartbutton 
           id={products._id}
-          name={products.name} 
           price_id={products.price_id}
+          name={products.name} 
+          
           currency={'INR'} 
           description={products.description}
            images={products.images}

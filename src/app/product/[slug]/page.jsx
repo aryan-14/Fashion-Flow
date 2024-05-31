@@ -76,7 +76,7 @@ const ProductDetails = async ({ params }) => {
 
               <div className="flex gap-2">
                 <RefreshCw size={20} className="bg-accent" />
-                <p> free return for 30 days</p>
+                <p className="text-black"> free return for 30 days</p>
               </div>
 
               <div className="flex gap-2">
